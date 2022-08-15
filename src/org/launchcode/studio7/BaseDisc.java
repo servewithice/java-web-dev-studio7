@@ -39,7 +39,10 @@ public abstract class BaseDisc {
     }
 
     public String discReport() {
-        return "Name: " + this.name + "\n
+        String output = String.format("\nDisk name: %s\nMax capacity: %d" +
+                "\nSpace used: %d" +
+                "\nAvailable space: %d\n", name, storageCapacity, capacityUsed, remainingCapacity);
+        return output;
     }
 
 }
